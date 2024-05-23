@@ -25,7 +25,12 @@ Module Program
             Console.WriteLine("unknow1 : {0},unknow1)
             Dim unknow2 as Int32 = br.ReadInt32
             Console.WriteLine("unknow2 : {0},unknow2)
-                        
+            Dim unknow3 as Int32 = br.ReadInt32
+            Console.WriteLine("unknow3 : {0},unknow3)
+            Dim unknow4 as Int32 = br.ReadInt32
+            Console.WriteLine("unknow4 : {0},unknow4)
+            Dim unknow5 as Int32 = br.ReadInt32
+			Console.WriteLine("unknow5 : {0},unknow5)					
 
             Console.WriteLine(c)
         End If
