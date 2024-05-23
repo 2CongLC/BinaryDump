@@ -24,7 +24,7 @@ Module Program
             Console.WriteLine("signature {0},signature)
             Console.WriteLine()
 	    Console.WriteLine("============== TRY GET HEADER INFO ===============")
-	    Console
+	    Console.WriteLine()
 	    Dim unknow1 as Int32 = br.ReadInt32
             Console.WriteLine("unknow1 : {0},unknow1)
             Dim unknow2 as Int32 = br.ReadInt32
@@ -45,7 +45,8 @@ Module Program
             Console.WriteLine("unknow9 : {0},unknow9)
 	    Dim unknow10 as Int32 = br.ReadInt32
             Console.WriteLine("unknow10 : {0},unknow10)
-                    
+            Console.WriteLine()
+	    Console.WriteLine("============ View Data as Hex Format ==========")													
 
 
             
