@@ -19,10 +19,11 @@ Module Program
         End If
         Dim p As String = Nothing
         If IO.File.Exists(input) Then
-            Dim a = ByteArrayToString(System.IO.File.ReadAllBytes(input)).Split("-")
-            Dim b = HexToInt(a(3) & a(9))
-            Dim c = IntToHex(b)
-            Dim d = HexToString(c)
+            Dim signature as String = Encoding.GetEncoding("us-ascii").GetString(br.ReadBytes(4))
+            Console.WriteLine("signature {0},signature)
+            Dim unknow1 as Int32 = br.ReadInt32
+            Console.WriteLine("unknow1 : {0},unknow1)
+            Dim unknow2 as Int32 = br.ReadInt32
 
             Console.WriteLine(c)
         End If
