@@ -38,7 +38,7 @@ Module Program
             Dim unknow6 as Int32 = br.ReadInt32
             Console.WriteLine("unknow6 : {0},unknow6)
             Dim unknow7 as Int32 = br.Readint32
-            Console.WriteLine("unknow7 {0},unknow7)
+            Console.WriteLine("unknow7 : {0},unknow7)
 	    Dim unknow8 as Int32 = br.ReadInt32
             Console.WriteLine("unknow8 : {0},unknow8)
 	    Dim unknow9 as Int32 = br.ReadInt32
