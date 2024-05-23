@@ -1,0 +1,15 @@
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\bin\Debug\net8.0\BinaryDump.exe
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\bin\Debug\net8.0\BinaryDump.deps.json
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\bin\Debug\net8.0\BinaryDump.runtimeconfig.json
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\bin\Debug\net8.0\BinaryDump.dll
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\bin\Debug\net8.0\BinaryDump.pdb
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\obj\Debug\net8.0\BinaryDump.GeneratedMSBuildEditorConfig.editorconfig
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\obj\Debug\net8.0\BinaryDump.AssemblyInfoInputs.cache
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\obj\Debug\net8.0\BinaryDump.AssemblyInfo.vb
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\obj\Debug\net8.0\BinaryDump.vbproj.CoreCompileInputs.cache
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\obj\Debug\net8.0\BinaryDump.sourcelink.json
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\obj\Debug\net8.0\BinaryDump.dll
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\obj\Debug\net8.0\refint\BinaryDump.dll
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\obj\Debug\net8.0\BinaryDump.pdb
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\obj\Debug\net8.0\BinaryDump.genruntimeconfig.cache
+D:\Source VBNet_C#\GitHub\BinaryDump\BinaryDump\obj\Debug\net8.0\ref\BinaryDump.dll
