@@ -68,8 +68,23 @@ Module Program
             Console.WriteLine("hex-unknow9 : {0},h9)
 	    Dim h10 as String = IntToHex(unknow10)																				
 	    Console.WriteLine("hex-unknow10 : {0},h10)																		
-            
-        End If
+            Console.WriteLine()
+	    Console.WriteLine("============= View Data As String ==========")
+	    Console.WriteLine()																						
+            Dim s1 as String = HexToString(h1)
+	    Console.WriteLine("text-unknow1 : {0}",s1)
+	    Dim s2 as String = HexToString(h1)
+	    Console.WriteLine("text-unknow1 : {0}",s1)
+	    Dim s3 as String = HexToString(h1)
+	    Console.WriteLine("text-unknow1 : {0}",s1)
+	    Dim s4 as String = HexToString(h1)
+	    Console.WriteLine("text-unknow1 : {0}",s1)
+            Dim s5 as String = HexToString(h1)
+	    Console.WriteLine("text-unknow1 : {0}",s1)
+            Dim s6 as String = HexToString(h1)
+	    Console.WriteLine("text-unknow1 : {0}",s1)
+																								
+	    End If
         Console.ReadLine()
     End Sub
 
