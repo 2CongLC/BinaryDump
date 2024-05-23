@@ -22,7 +22,10 @@ Module Program
             br = New BinaryReader(File.OpenRead(input))
             Dim signature as String = Encoding.GetEncoding("us-ascii").GetString(br.ReadBytes(4))
             Console.WriteLine("signature {0},signature)
-            Dim unknow1 as Int32 = br.ReadInt32
+            Console.WriteLine()
+	    Console.WriteLine("============== TRY GET HEADER INFO ===============")
+	    Console
+	    Dim unknow1 as Int32 = br.ReadInt32
             Console.WriteLine("unknow1 : {0},unknow1)
             Dim unknow2 as Int32 = br.ReadInt32
             Console.WriteLine("unknow2 : {0},unknow2)
@@ -33,15 +36,15 @@ Module Program
             Dim unknow5 as Int32 = br.ReadInt32
 	    Console.WriteLine("unknow5 : {0},unknow5)
             Dim unknow6 as Int32 = br.ReadInt32
-Console.WriteLine("unknow6 : {0},unknow6)
+            Console.WriteLine("unknow6 : {0},unknow6)
             Dim unknow7 as Int32 = br.Readint32
-Console.WriteLine("unknow7 {0},unknow7)
-						Dim unknow8 as Int32 = br.ReadInt32
-Console.WriteLine("unknow8 : {0},unknow8)
-						Dim unknow9 as Int32 = br.ReadInt32
-Console.WriteLine("unknow9 : {0},unknow9)
-						Dim unknow10 as Int32 = br.ReadInt32
-Console.WriteLine("unknow10 : {0},unknow10)
+            Console.WriteLine("unknow7 {0},unknow7)
+	    Dim unknow8 as Int32 = br.ReadInt32
+            Console.WriteLine("unknow8 : {0},unknow8)
+	    Dim unknow9 as Int32 = br.ReadInt32
+            Console.WriteLine("unknow9 : {0},unknow9)
+	    Dim unknow10 as Int32 = br.ReadInt32
+            Console.WriteLine("unknow10 : {0},unknow10)
                     
 
 
