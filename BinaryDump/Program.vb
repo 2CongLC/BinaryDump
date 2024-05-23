@@ -95,7 +95,23 @@ Module Program
             Return hexValue & " 00 00 00"
         End If
     End Function
+																					
+    Public Function HexToInt(ByVal hex As String) As Integer
+        Dim num As Integer = Integer.Parse(hex, System.Globalization.NumberStyles.HexNumber)
+        Return num
+    End Function
 
+    Public Function HexToString(ByVal hex As String) As String
+        Dim hexValuesSplit() As String = hex.Split(" "c)
+        Dim returnvar As String = ""
+        For Each hexs As String In hexValuesSplit
+            Dim value As Integer = Convert.ToInt32(hexs, 16)
+            Dim charValue As Char = ChrW(value)
+            returnvar &= charValue
+        Next
+        Return returnvar
+    End Function
+																				
     Public Function StringToHex(ByVal _in As String) As String
         Dim input As String = _in
         Dim values As Char() = input.ToCharArray()
@@ -174,21 +190,7 @@ Module Program
         Return hex
     End Function
 
-    Public Function HexToInt(ByVal hex As String) As Integer
-        Dim num As Integer = Integer.Parse(hex, System.Globalization.NumberStyles.HexNumber)
-        Return num
-    End Function
-
-    Public Function HexToString(ByVal hex As String) As String
-        Dim hexValuesSplit() As String = hex.Split(" "c)
-        Dim returnvar As String = ""
-        For Each hexs As String In hexValuesSplit
-            Dim value As Integer = Convert.ToInt32(hexs, 16)
-            Dim charValue As Char = ChrW(value)
-            returnvar &= charValue
-        Next
-        Return returnvar
-    End Function
+    
 
     Public Function UnicodeHexToUnicodeString(ByVal hex As String) As String
         Dim hexString As String = hex.Replace(" ", "")
