@@ -24,6 +24,8 @@ Module Program
             Dim unknow1 as Int32 = br.ReadInt32
             Console.WriteLine("unknow1 : {0},unknow1)
             Dim unknow2 as Int32 = br.ReadInt32
+            Console.WriteLine("unknow2 : {0},unknow2)
+                        
 
             Console.WriteLine(c)
         End If
