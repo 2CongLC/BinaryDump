@@ -46,9 +46,18 @@ Module Program
 	    Dim unknow10 as Int32 = br.ReadInt32
             Console.WriteLine("unknow10 : {0},unknow10)
             Console.WriteLine()
-	    Console.WriteLine("============ View Data as Hex Format ==========")													
-
-
+	    Console.WriteLine("============ View Data as Hex Format ==========")
+	    Console.WriteLine()
+	    Console.WriteLine("hex-unknow1 : {0},IntToHex(unknow1))
+	    Console.WriteLine("hex-unknow2 : {0},IntToHex(unknow2))
+	    Console.WriteLine("hex-unknow3 : {0},IntToHex(unknow3))													
+            Console.WriteLine("hex-unknow4 : {0},IntToHex(unknow4))
+	    Console.WriteLine("hex-unknow5 : {0},IntToHex(unknow5))														
+	    Console.WriteLine("hex-unknow6 : {0},IntToHex(unknow6))													
+            Console.WriteLine("hex-unknow7 : {0},IntToHex(unknow7))
+            Console.WriteLine("hex-unknow8 : {0},IntToHex(unknow8))
+            Console.WriteLine("hex-unknow9 : {0},IntToHex(unknow9))
+	    Console.WriteLine("hex-unknow10 : {0},IntToHex(unknow10))																		
             
         End If
         Console.ReadLine()
