@@ -25,25 +25,25 @@ Module Program
             Console.WriteLine()
             Console.WriteLine("============== TRY GET HEADER INFO ===============")
             Console.WriteLine()
-            Dim unknow1 As UInt32 = br.ReadUInt32
+            Dim unknow1 As Int32 = br.ReadInt32
             Console.WriteLine("unknow1 : {0}",unknow1)
-            Dim unknow2 as UInt32 = br.ReadUInt32
+            Dim unknow2 as Int32 = br.ReadInt32
             Console.WriteLine("unknow2 : {0}",unknow2)
-            Dim unknow3 as UInt32 = br.ReadUInt32
+            Dim unknow3 as Int32 = br.ReadInt32
             Console.WriteLine("unknow3 : {0}",unknow3)
-            Dim unknow4 as UInt32 = br.ReadUInt32
+            Dim unknow4 as Int32 = br.ReadInt32
             Console.WriteLine("unknow4 : {0}",unknow4)
-            Dim unknow5 as UInt32 = br.ReadUInt32
+            Dim unknow5 as Int32 = br.ReadInt32
             Console.WriteLine("unknow5 : {0}", unknow5)
-            Dim unknow6 as UInt32 = br.ReadUInt32
+            Dim unknow6 as Int32 = br.ReadInt32
             Console.WriteLine("unknow6 : {0}",unknow6)
-            Dim unknow7 as UInt32 = br.ReadUInt32
+            Dim unknow7 as Int32 = br.ReadInt32
             Console.WriteLine("unknow7 : {0}",unknow7)
-            Dim unknow8 As UInt32 = br.ReadUInt32
+            Dim unknow8 As Int32 = br.ReadInt32
             Console.WriteLine("unknow8 : {0}",unknow8)
-            Dim unknow9 As UInt32 = br.ReadUInt32
+            Dim unknow9 As Int32 = br.ReadInt32
             Console.WriteLine("unknow9 : {0}",unknow9)
-            Dim unknow10 As UInt32 = br.ReadUInt32
+            Dim unknow10 As Int32 = br.ReadInt32
             Console.WriteLine("unknow10 : {0}",unknow10)
             Console.WriteLine()
             Console.WriteLine("============ View Data as Hex Format ==========")
@@ -126,16 +126,16 @@ Module Program
     End Sub
 
     Class FileData
-        Public data0 As UInt32 = br.ReadUInt32
-        Public data1 As UInt32 = br.ReadUInt32
-        Public data2 As UInt32 = br.ReadUInt32
-        Public data3 As UInt32 = br.ReadUInt32
-        Public data4 As UInt32 = br.ReadUInt32
-        Public data5 As UInt32 = br.ReadUInt32
-        Public data6 As UInt32 = br.ReadUInt32
-        Public data7 As UInt32 = br.ReadUInt32
-        Public data8 As UInt32 = br.ReadUInt32
-        Public data9 As UInt32 = br.ReadUInt32
+        Public data0 As Int32 = br.ReadInt32
+        Public data1 As Int32 = br.ReadInt32
+        Public data2 As Int32 = br.ReadInt32
+        Public data3 As Int32 = br.ReadInt32
+        Public data4 As Int32 = br.ReadInt32
+        Public data5 As Int32 = br.ReadInt32
+        Public data6 As Int32 = br.ReadInt32
+        Public data7 As Int32 = br.ReadInt32
+        Public data8 As Int32 = br.ReadInt32
+        Public data9 As Int32 = br.ReadInt32
         Public Sub New()
             data0 = br.ReadUInt32
             data1 = br.ReadUInt32
