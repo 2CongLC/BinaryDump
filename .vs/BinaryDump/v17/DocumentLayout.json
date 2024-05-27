@@ -5,6 +5,13 @@
     {
       "AbsoluteMoniker": "D:0:0:{A9AB3A79-9C74-495D-BA45-70FF2281C8DA}|BinaryDump\\BinaryDump.vbproj|d:\\source vbnet_c#\\github\\binarydump\\binarydump\\program.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{A9AB3A79-9C74-495D-BA45-70FF2281C8DA}|BinaryDump\\BinaryDump.vbproj|solutionrelative:binarydump\\program.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9AB3A79-9C74-495D-BA45-70FF2281C8DA}|BinaryDump\\BinaryDump.vbproj|d:\\source vbnet_c#\\github\\binarydump\\binarydump\\binarydump.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{A9AB3A79-9C74-495D-BA45-70FF2281C8DA}|BinaryDump\\BinaryDump.vbproj|solutionrelative:binarydump\\binarydump.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.300\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +21,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BinaryDump",
+              "DocumentMoniker": "D:\\Source VBNet_C#\\GitHub\\BinaryDump\\BinaryDump\\BinaryDump.vbproj",
+              "RelativeDocumentMoniker": "BinaryDump\\BinaryDump.vbproj",
+              "ToolTip": "D:\\Source VBNet_C#\\GitHub\\BinaryDump\\BinaryDump\\BinaryDump.vbproj",
+              "RelativeToolTip": "BinaryDump\\BinaryDump.vbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2024-05-27T02:12:41.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Microsoft.NET.TargetFrameworkInference.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAWwIUAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-05-27T02:12:34.425Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -28,7 +54,7 @@
               "RelativeDocumentMoniker": "BinaryDump\\Program.vb",
               "ToolTip": "D:\\Source VBNet_C#\\GitHub\\BinaryDump\\BinaryDump\\Program.vb",
               "RelativeToolTip": "BinaryDump\\Program.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAApAAAA",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAgwGIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-05-23T03:56:54.158Z",
               "EditorCaption": ""
