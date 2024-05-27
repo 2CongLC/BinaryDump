@@ -212,6 +212,26 @@ Module Program
         Return returnvar
     End Function
 
+    Public Function GB2312ToUtf8(ByVal gb2312String As String) As String
+        Dim fromEncoding As Encoding = Encoding.GetEncoding("gb2312")
+        Dim toEncoding As Encoding = Encoding.UTF8
+        Return EncodingConvert(gb2312String, fromEncoding, toEncoding)
+    End Function
+
+    Public Function Utf8ToGB2312(ByVal utf8String As String) As String
+        Dim fromEncoding As Encoding = Encoding.UTF8
+        Dim toEncoding As Encoding = Encoding.GetEncoding("gb2312")
+        Return EncodingConvert(utf8String, fromEncoding, toEncoding)
+    End Function
+
+    Public Function EncodingConvert(ByVal fromString As String, ByVal fromEncoding As Encoding, ByVal toEncoding As Encoding) As String
+        Dim fromBytes As Byte() = fromEncoding.GetBytes(fromString)
+        Dim toBytes As Byte() = Encoding.Convert(fromEncoding, toEncoding, fromBytes)
+        Dim toString As String = toEncoding.GetString(toBytes)
+        Return toString
+    End Function
+
+
 #End Region
 
 
