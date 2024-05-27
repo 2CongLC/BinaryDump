@@ -102,6 +102,20 @@ Module Program
             Next
 
 
+            p = Path.GetDirectoryName(input) & "\" & Path.GetFileNameWithoutExtension(input)
+            Directory.CreateDirectory(p)
+            For Each f As FileData In subfiles
+
+                Console.WriteLine("data0 : {0} - data1 : {1} - data2 : {2} - data3 : {3} - data4 : {4} - data5 : {5}", f.data0, f.data1, f.data2, f.data3, f.data4, f.data5)
+
+
+
+                ' br.BaseStream.Position = 
+                Using bw As New BinaryWriter(File.Create(p & "//" & f.data0))
+                    bw.Write(br.ReadBytes(f.data3))
+                End Using
+
+            Next
 
             Console.WriteLine()
             Console.WriteLine("============== DONE !!!!!!!! ============")
