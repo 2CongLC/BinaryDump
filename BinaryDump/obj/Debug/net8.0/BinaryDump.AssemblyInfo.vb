@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("BinaryDump"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+159ec46746b6b70b0b1e8256f3c31f39bbd4e5e0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8aa7c4c800eb50bba674e16d93bb17dd25aa2a6c"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("BinaryDump"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("BinaryDump"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")> 

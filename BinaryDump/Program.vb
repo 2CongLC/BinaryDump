@@ -92,8 +92,14 @@ Module Program
             Dim s10 as String = HexToString(h10)
             Console.WriteLine("text-unknow10 : {0}", s10)
 
+            Console.WriteLine()
+            Console.WriteLine("============== Anyzing ..... ============")
+            Console.WriteLine()
 
-
+            Dim subfiles As New List(Of FileData)
+            For i As Int32 = 0 To unknow1 - 1
+                subfiles.Add(New FileData)
+            Next
 
 
 
@@ -105,7 +111,45 @@ Module Program
         Console.ReadLine()
     End Sub
 
+    Class FileData
+        Public data0 As UInt32 = br.ReadUInt32
+        Public data1 As UInt32 = br.ReadUInt32
+        Public data2 As UInt32 = br.ReadUInt32
+        Public data3 As UInt32 = br.ReadUInt32
+        Public data4 As UInt32 = br.ReadUInt32
+        Public data5 As UInt32 = br.ReadUInt32
+        Public data6 As UInt32 = br.ReadUInt32
+        Public data7 As UInt32 = br.ReadUInt32
+        Public data8 As UInt32 = br.ReadUInt32
+        Public data9 As UInt32 = br.ReadUInt32
+        Public Sub New()
+            data0 = br.ReadUInt32
+            data1 = br.ReadUInt32
+            data2 = br.ReadUInt32
+            data3 = br.ReadUInt32
+            data4 = br.ReadUInt32
+            data5 = br.ReadUInt32
+            data6 = br.ReadUInt32
+            data7 = br.ReadUInt32
+            data8 = br.ReadUInt32
+            data9 = br.ReadUInt32
+        End Sub
 
+    End Class
+#Region "Tools"
+    Function GetTypes() As String
+        Dim magicBytes = br.ReadBytes(4)
+        br.BaseStream.Position -= 4
+        Dim magic = System.Text.Encoding.UTF8.GetString(magicBytes)
+        Select Case magic
+            Case ""
+                Return ""
+            Case ""
+                Return ""
+            Case Else
+                Return magic
+        End Select
+    End Function
 
 
     Public Function IntToHex(ByVal val As Integer) As String
@@ -137,7 +181,7 @@ Module Program
             Return hexValue & " 00 00 00"
         End If
     End Function
-																					
+
     Public Function HexToInt(ByVal hex As String) As Integer
         Dim num As Integer = Integer.Parse(hex, System.Globalization.NumberStyles.HexNumber)
         Return num
@@ -153,97 +197,8 @@ Module Program
         Next
         Return returnvar
     End Function
-																				
-    Public Function StringToHex(ByVal _in As String) As String
-        Dim input As String = _in
-        Dim values As Char() = input.ToCharArray()
-        Dim r As String = ""
-        For Each letter As Char In values
-            Dim value As Integer = Convert.ToInt32(letter)
-            Dim hexOutput As String = String.Format("{0:X}", value)
-            If value > 255 Then
-                Return UnicodeStringToHex(input)
-            End If
-            r += value & " "
-        Next
-        Dim bytes As String() = r.Split(" "c)
-        Dim b As Byte() = New Byte(bytes.Length - 2) {}
-        Dim index As Integer = 0
-        For Each val As String In bytes
-            If index = bytes.Length - 1 Then
-                Exit For
-            End If
-            If Integer.Parse(val) > Byte.MaxValue Then
-                b(index) = Byte.Parse("0")
-            Else
-                b(index) = Byte.Parse(val)
-            End If
-            index += 1
-        Next
-        r = ByteArrayToString(b)
-        Return r.Replace("-", " ")
-    End Function
 
-    Public Function UnicodeStringToHex(ByVal _in As String) As String
-        Dim input As String = _in
-        Dim values As Char() = Encoding.Unicode.GetChars(Encoding.Unicode.GetBytes(input.ToCharArray()))
-        Dim r As String = ""
-        For Each letter As Char In values
-            Dim value As Integer = Convert.ToInt32(letter)
-            Dim hexOutput As String = String.Format("{0:X}", value)
-            r += value & " "
-        Next
-        Dim unicode As New UnicodeEncoding()
-        Dim b As Byte() = unicode.GetBytes(input)
-        r = ByteArrayToString(b)
-        Return r.Replace("-", " ")
-    End Function
+#End Region
 
-    Public Function StringToByteArray(ByVal hex As String) As Byte()
-        Try
-            Dim NumberChars As Integer = hex.Length
-            Dim bytes As Byte() = New Byte(NumberChars \ 2 - 1) {}
-            For i As Integer = 0 To NumberChars - 1 Step 2
-                bytes(i \ 2) = Convert.ToByte(hex.Substring(i, 2), 16)
-            Next
-            Return bytes
-        Catch
-            Console.Write("Invalid format file!")
-            Return New Byte(0) {}
-        End Try
-    End Function
-
-    Public Function StringToByteArray(ByVal hex As String()) As Byte()
-        Try
-            Dim NumberChars As Integer = hex.Length
-            Dim bytes As Byte() = New Byte(NumberChars - 1) {}
-            For i As Integer = 0 To NumberChars - 1
-                bytes(i) = Convert.ToByte(hex(i), 16)
-            Next
-            Return bytes
-        Catch
-            Console.Write("Invalid format file!")
-            Return New Byte(0) {}
-        End Try
-    End Function
-
-    Public Function ByteArrayToString(ByVal ba As Byte()) As String
-        Dim hex As String = BitConverter.ToString(ba)
-        Return hex
-    End Function
-
-    
-
-    Public Function UnicodeHexToUnicodeString(ByVal hex As String) As String
-        Dim hexString As String = hex.Replace(" ", "")
-        Dim length As Integer = hexString.Length
-        Dim bytes() As Byte = New Byte(length \ 2 - 1) {}
-
-        For i As Integer = 0 To length - 1 Step 2
-            bytes(i \ 2) = Convert.ToByte(hexString.Substring(i, 2), 16)
-        Next
-
-        Return Encoding.Unicode.GetString(bytes)
-    End Function
 
 End Module
