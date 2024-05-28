@@ -3,6 +3,7 @@ Imports System.Collections
 Imports System.IO
 Imports System.IO.Compression
 Imports System.Runtime
+Imports System.Runtime.InteropServices
 Imports System.Runtime.Intrinsics
 Imports System.Text
 Imports System.Text.RegularExpressions
@@ -20,62 +21,66 @@ Module Program
         Dim p As String = Nothing
         If IO.File.Exists(input) Then
             br = New BinaryReader(File.OpenRead(input))
-            Dim signature as String = Encoding.GetEncoding("us-ascii").GetString(br.ReadBytes(4))
+            Dim signature As String = New String(br.ReadChars(4)) ' Offset = 0 , Length =4 
             Console.WriteLine("signature : {0}", signature)
             Console.WriteLine()
             Console.WriteLine("============== TRY GET HEADER INFO ===============")
             Console.WriteLine()
-            Dim unknow1 As Int32 = br.ReadInt32
-            Console.WriteLine("unknow1 : {0}",unknow1)
-            Dim unknow2 as Int32 = br.ReadInt32
-            Console.WriteLine("unknow2 : {0}",unknow2)
-            Dim unknow3 as Int32 = br.ReadInt32
-            Console.WriteLine("unknow3 : {0}",unknow3)
-            Dim unknow4 as Int32 = br.ReadInt32
-            Console.WriteLine("unknow4 : {0}",unknow4)
-            Dim unknow5 as Int32 = br.ReadInt32
+            Dim unknow1 As Int32 = br.ReadInt32 ' Offset = 4 , Length =4 
+            Console.WriteLine("unknow1 : {0}", unknow1)
+            Dim unknow2 As Int32 = br.ReadInt32 ' Offset = 8 , Length =4 
+            Console.WriteLine("unknow2 : {0}", unknow2)
+            Dim unknow3 As Int32 = br.ReadInt32 ' Offset = 12 , Length =4 
+            Console.WriteLine("unknow3 : {0}", unknow3)
+            Dim unknow4 As Int32 = br.ReadInt32 ' Offset = 16 , Length =4 
+            Console.WriteLine("unknow4 : {0}", unknow4)
+            Dim unknow5 As Int32 = br.ReadInt32 ' Offset = 20 , Length =4 
             Console.WriteLine("unknow5 : {0}", unknow5)
-            Dim unknow6 as Int32 = br.ReadInt32
-            Console.WriteLine("unknow6 : {0}",unknow6)
-            Dim unknow7 as Int32 = br.ReadInt32
-            Console.WriteLine("unknow7 : {0}",unknow7)
-            Dim unknow8 As Int32 = br.ReadInt32
-            Console.WriteLine("unknow8 : {0}",unknow8)
-            Dim unknow9 As Int32 = br.ReadInt32
-            Console.WriteLine("unknow9 : {0}",unknow9)
-            Dim unknow10 As Int32 = br.ReadInt32
-            Console.WriteLine("unknow10 : {0}",unknow10)
+            Dim unknow6 As Int32 = br.ReadInt32 ' Offset = 24 , Length =4 
+            Console.WriteLine("unknow6 : {0}", unknow6)
+            Dim unknow7 As Int32 = br.ReadInt32 ' Offset = 28 , Length =4 
+            Console.WriteLine("unknow7 : {0}", unknow7)
+            Dim unknow8 As Int32 = br.ReadInt32 ' Offset = 32 , Length =4 
+            Console.WriteLine("unknow8 : {0}", unknow8)
+            Dim unknow9 As Int32 = br.ReadInt32 ' Offset = 36 , Length =4 
+            Console.WriteLine("unknow9 : {0}", unknow9)
+            Dim unknow10 As Int32 = br.ReadInt32 ' Offset = 40 , Length =4 
+            Console.WriteLine("unknow10 : {0}", unknow10)
             Console.WriteLine()
             Console.WriteLine("============ View Data as Hex Format ==========")
             Console.WriteLine()
+
+            ' Offset = 44 , Length = n
+            br.BaseStream.Position = 44
+
             Dim h1 As String = IntToHex(unknow1)
-            Console.WriteLine("hex-unknow1 : {0}",h1)
+            Console.WriteLine("hex-unknow1 : {0}", h1)
             Dim h2 As String = IntToHex(unknow2)
-            Console.WriteLine("hex-unknow2 : {0}",h2)
+            Console.WriteLine("hex-unknow2 : {0}", h2)
             Dim h3 As String = IntToHex(unknow3)
-            Console.WriteLine("hex-unknow3 : {0}",h3)
+            Console.WriteLine("hex-unknow3 : {0}", h3)
             Dim h4 As String = IntToHex(unknow4)
-            Console.WriteLine("hex-unknow4 : {0}",h4)
+            Console.WriteLine("hex-unknow4 : {0}", h4)
             Dim h5 As String = IntToHex(unknow5)
-            Console.WriteLine("hex-unknow5 : {0}",h5)
+            Console.WriteLine("hex-unknow5 : {0}", h5)
             Dim h6 As String = IntToHex(unknow6)
-            Console.WriteLine("hex-unknow6 : {0}",h6)
+            Console.WriteLine("hex-unknow6 : {0}", h6)
             Dim h7 As String = IntToHex(unknow7)
-            Console.WriteLine("hex-unknow7 : {0}",h7)
-            Dim h8 as String = 	IntToHex(unknow8)
+            Console.WriteLine("hex-unknow7 : {0}", h7)
+            Dim h8 As String = IntToHex(unknow8)
             Console.WriteLine("hex-unknow8 : {0}", h8)
-            Dim h9 as String = 	IntToHex(unknow9)																			
-            Console.WriteLine("hex-unknow9 : {0}",h9)
+            Dim h9 As String = IntToHex(unknow9)
+            Console.WriteLine("hex-unknow9 : {0}", h9)
             Dim h10 As String = IntToHex(unknow10)
             Console.WriteLine("hex-unknow10 : {0}", h10)
             Console.WriteLine()
             Console.WriteLine("============= View Data As String ==========")
-            Console.WriteLine()																						
-            Dim s1 as String = HexToString(h1)
+            Console.WriteLine()
+            Dim s1 As String = HexToString(h1)
             Console.WriteLine("text-unknow1 : {0}", s1)
-            Dim s2 as String = HexToString(h2)
+            Dim s2 As String = HexToString(h2)
             Console.WriteLine("text-unknow2 : {0}", s2)
-            Dim s3 as String = HexToString(h3)
+            Dim s3 As String = HexToString(h3)
             Console.WriteLine("text-unknow3 : {0}", s3)
             Dim s4 as String = HexToString(h4)
             Console.WriteLine("text-unknow4 : {0}", s4)
@@ -111,9 +116,9 @@ Module Program
 
 
                 ' br.BaseStream.Position = 
-                Using bw As New BinaryWriter(File.Create(p & "//" & f.data0))
-                    bw.Write(br.ReadBytes(f.data3))
-                End Using
+                ' Using bw As New BinaryWriter(File.Create(p & "//" & f.data0))
+                'bw.Write(br.ReadBytes(f.data3))
+                ' End Using
 
             Next
 
@@ -126,27 +131,27 @@ Module Program
     End Sub
 
     Class FileData
-        Public data0 As Int32 = br.ReadInt32
-        Public data1 As Int32 = br.ReadInt32
-        Public data2 As Int32 = br.ReadInt32
-        Public data3 As Int32 = br.ReadInt32
-        Public data4 As Int32 = br.ReadInt32
-        Public data5 As Int32 = br.ReadInt32
-        Public data6 As Int32 = br.ReadInt32
-        Public data7 As Int32 = br.ReadInt32
-        Public data8 As Int32 = br.ReadInt32
-        Public data9 As Int32 = br.ReadInt32
+        Public data0 As Int32
+        Public data1 As Int32
+        Public data2 As Int32
+        Public data3 As Int32
+        Public data4 As Int32
+        Public data5 As Int32
+        Public data6 As Int32
+        Public data7 As Int32
+        Public data8 As Int32
+        Public data9 As Int32
         Public Sub New()
-            data0 = br.ReadUInt32
-            data1 = br.ReadUInt32
-            data2 = br.ReadUInt32
-            data3 = br.ReadUInt32
-            data4 = br.ReadUInt32
-            data5 = br.ReadUInt32
-            data6 = br.ReadUInt32
-            data7 = br.ReadUInt32
-            data8 = br.ReadUInt32
-            data9 = br.ReadUInt32
+            data0 = br.ReadInt32
+            data1 = br.ReadInt32
+            data2 = br.ReadInt32
+            data3 = br.ReadInt32
+            data4 = br.ReadInt32
+            data5 = br.ReadInt32
+            data6 = br.ReadInt32
+            data7 = br.ReadInt32
+            data8 = br.ReadInt32
+            data9 = br.ReadInt32
         End Sub
 
     End Class
@@ -233,6 +238,10 @@ Module Program
 
 
 #End Region
+
+
+
+
 
 
 End Module
