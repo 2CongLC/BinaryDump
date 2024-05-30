@@ -14,7 +14,7 @@ Module Program
     Public input As String
     Sub Main(args As String())
         If args.Count = 0 Then
-            Console.WriteLine("Tool UnPack - 2CongLC.vn :: 2024")
+            Console.WriteLine("Binary Dump - 2CongLC.vn :: 2024")
         Else
             input = args(0)
         End If
@@ -115,10 +115,14 @@ Module Program
 
 
 
-                ' br.BaseStream.Position = 
-                ' Using bw As New BinaryWriter(File.Create(p & "//" & f.data0))
-                'bw.Write(br.ReadBytes(f.data3))
-                ' End Using
+
+                Using bw As New BinaryWriter(File.Create(p & "//" & f.data0 & ".txt"))
+
+                    '  bw.Write(br.ReadBytes(f.data3)) 'f.data4
+
+                End Using
+
+
 
             Next
 
