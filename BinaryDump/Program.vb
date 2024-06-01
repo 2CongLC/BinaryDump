@@ -107,8 +107,8 @@ Module Program
             Next
 
 
-            p = Path.GetDirectoryName(input) & "\" & Path.GetFileNameWithoutExtension(input)
-            Directory.CreateDirectory(p)
+            ' p = Path.GetDirectoryName(input) & "\" & Path.GetFileNameWithoutExtension(input)
+            'Directory.CreateDirectory(p)
             For Each f As FileData In subfiles
 
                 Console.WriteLine("data0 : {0} - data1 : {1} - data2 : {2} - data3 : {3} - data4 : {4} - data5 : {5}", f.data0, f.data1, f.data2, f.data3, f.data4, f.data5)
@@ -116,11 +116,11 @@ Module Program
 
 
 
-                Using bw As New BinaryWriter(File.Create(p & "//" & f.data0 & ".txt"))
+                ' Using bw As New BinaryWriter(File.Create(p & "//" & f.data0 & ".txt"))
 
-                    '  bw.Write(br.ReadBytes(f.data3)) 'f.data4
+                '  bw.Write(br.ReadBytes(f.data3)) 'f.data4
 
-                End Using
+                '  End Using
 
 
 
